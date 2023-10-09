@@ -10,7 +10,7 @@ export const askMyChatGptController = async (req, res) => {
 
     const userQuestion = messages[messages.length - 1].content;
 
-    // Convert the user's question to an embedding
+    // Convert the user's question to an embedding.
     const userQuestionEmbedding = await embeddingServicesChatGpt(userQuestion);
 
     // Fetch the stored knowledge base from the database
